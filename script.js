@@ -10,4 +10,15 @@ fetch(apiUrl).then(function (response) {
     } else {
         document.location.replace('./indem.html');
     }
-    });
+});
+
+
+const searchButton = $('.searchButton')
+let artist;
+
+
+searchButton.click(function () {
+    artist = $('.userInput').val()
+    console.log(artist)
+
+})
