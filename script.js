@@ -1,24 +1,15 @@
-fetch(apiUrl).then(function (response) {
-    if (response.ok) {
-        response.json().then(function (data) {
-            displayIssues(data);
+const apiKey= "AIzaSyCvwFXwykEYMZpivD7c0pXm2KjCi1srHwY"
 
-            if (response.headers.get('Link')) {
-                displayWarning(repo)
-            }
-        });
-    } else {
-        document.location.replace('./indem.html');
-    }
-});
+function youtubeApi() {
+    const queryURL = "https://youtube.googleapis.com/youtube/v3/search?key=AIzaSyCvwFXwykEYMZpivD7c0pXm2KjCi1srHwY"
+    fetch(queryURL)
+        .then(function (response) {
+            return response.json()
+        })
+        .then(function(data) {
+    console.log(data)
+        })
 
+}
 
-const searchButton = $('.searchButton')
-let artist;
-
-
-searchButton.click(function () {
-    artist = $('.userInput').val()
-    console.log(artist)
-
-})
+youtubeApi()
