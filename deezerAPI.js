@@ -1,9 +1,13 @@
 
-apiKey = '26d4420ef3aa930b6e352d4c85438241'
+const searchButton = $('.searchButton')
+let artist;
+
+
+
 
 
 function getApi() {
-    const queryURL = 'https://api.musixmatch.com/ws/1.1/'
+    const queryURL = 'https://api.deezer.com/artist/' + artist
     fetch(queryURL)
         .then(function (response) {
             return response.json()
@@ -11,7 +15,26 @@ function getApi() {
         .then(function (data) {
             console.log(data)
         })
-        
+
 }
 
-getApi()
+
+
+function renderTopSongs() {
+    const songNameEl = $('#savedSearches')
+    const artistNameEl = $(`.savedSearches`)
+    const albumNameEL = $(`.savedSearches`)
+
+    songNameEl.text('put the name of the songs here')
+    songNameEl.append(songNameEl)
+
+
+}
+
+renderTopSongs()
+
+searchButton.click(function () {
+    artist = $('.userInput').val()
+    console.log(artist)
+    getApi()
+})
