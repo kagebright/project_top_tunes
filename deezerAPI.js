@@ -11,8 +11,7 @@ function getApi() {
         .then(function (data) {
             console.log(data)
         })
-
-
+        
 }
 
 getApi()
