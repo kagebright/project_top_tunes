@@ -1,18 +1,18 @@
-const queryURL = 'https://api.deezer.com/user/2529/playlists'
 
+apiKey = '26d4420ef3aa930b6e352d4c85438241'
 
 
 function getApi() {
-
+    const queryURL = 'https://api.musixmatch.com/ws/1.1/'
     fetch(queryURL)
         .then(function (response) {
-            return response.json();
+            return response.json()
         })
         .then(function (data) {
-            for (let i = 0; i < data.length; i++) {
-                const listItem = document.createElement('li');
-                listItem.textContent = data[i].html_url;
-                repoList.appendChild(listItem);
-            }
-        });
+            console.log(data)
+        })
+
+
 }
+
+getApi()
