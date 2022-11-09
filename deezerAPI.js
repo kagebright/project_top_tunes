@@ -13,12 +13,22 @@ function getApi() {
             return response.json()
         })
         .then(function (data) {
+            getTopSongs(data.id)
             console.log(data)
         })
 
 }
 
-
+function getTopSongs(id) {
+    const topSongApi = 'https://api.deezer.com/artist/' + id + '/top'
+    fetch(topSongApi)
+        .then(function (response) {
+            return response.json()
+        })
+        .then(function (data) {
+            console.log(data)
+        })
+}
 
 function renderTopSongs() {
     const songNameEl = $('#savedSearches')
@@ -31,7 +41,7 @@ function renderTopSongs() {
 
 }
 
-renderTopSongs()
+// renderTopSongs()
 
 searchButton.click(function () {
     artist = $('.userInput').val()
