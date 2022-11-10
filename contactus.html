@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+    <title class="center">TopTunes</title>
+</head>
+
+<body>
+    <header class="top-bar">TopTunes</header>
+    <nav class="navbar has-shadow">
+        <div class="navbar-menu" id="nav-links">
+            <div class="navbar-end">
+                <a class="navbar-item" href="./aboutus.html">About Us</a>
+                <a class="navbar-item" href="./savedsearches.html">Saved Searches</a>
+                <a class="navbar-item" href="./contactus.html">Contact Us</a>
+                <a class="navbar-item" href="./index.html">Home Page</a>
+            </div>
+        </div>
+        <!--Add some styling, classes and center it so the company name could appear on the top-->
+    </nav>
+ 
+<!--The 3 Sections "About Us", "Saved Searches", "Contact us"-->
+    <article class="notification is-info has-text-centered">
+        <h3>Please fill in the form and let us know how we did or give us suggestions!</h3>
+    </article>
+
+    <section class="hero is-fullheight has-text-centered" class="center">
+
+        <div class="center">
+            <form class="notification is-primary is-light">
+                <div>
+                    <input type="text" placeholder="Name" required="">
+                </div>
+                <div>
+                    <input type="email" placeholder="Email" required="">
+                </div>
+                <div>
+                    <input type="tel" placeholder="Phone" required="">
+                </div>
+                <div class="is-size-1">
+                    <textarea class="input is-large" type="text" placeholder="Message" required=""></textarea>
+                </div>
+                <div>
+                    <button>submit</button>
+                </div>
+            </form>
+    </div>
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"> </script>
+    <script src="./deezerAPI.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
