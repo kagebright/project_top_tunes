@@ -1,5 +1,13 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/*Background Image*/
 body {
-    background-image: url();
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwaiwmFsVFT2kbj3gAu_HI6yp7RTeIETdzAQ&usqp=CAU);
    
 } 
 
@@ -22,3 +30,11 @@ body {
 .search {
 
 }
+
+.navigation div ul li {
+    display: inline-block;
+    margin-left: 25px;
+    
+
+
+

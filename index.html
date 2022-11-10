@@ -13,9 +13,18 @@
 </head>
 
 <body>
-    <nav class="top-bar">TopTunes
+    <header class="top-bar">TopTunes</header>
+    <nav class="navbar has-shadow">
+        <div class="navbar-menu" id="nav-links">
+            <div class="navbar-end">
+                <a class="navbar-item" href="./aboutus.html">About Us</a>
+                <a class="navbar-item" href="./savedsearches.html">Saved Searches</a>
+                <a class="navbar-item" href="./contactus.html">Contact Us</a>
+            </div>
+        </div>
         <!--Add some styling, classes and center it so the company name could appear on the top-->
     </nav>
+    
 
     <section class="hero">
         <!--Add Large container here which will hold the "Search Bar", "Search Results", "Link to Music video, and "Social Media" -->
@@ -41,18 +50,18 @@
     <section class="section has-background-light">
 
         <div class="container">
-            <div class="columns">
+            <div class="columns has-text-centered">
                 <div class="column">
 
                     <article class="notification is-info">
                         <figure class="media-left">
                             <span class="icon">
-                                <f class="fab fa-lg fa-css3-alt"></f>
+                                <f class="fa fa-lg fa-address-card"></f>
                             </span>
                         </figure>
                         <div class="media-content">
                             <div class="content">
-                                <h1 class= "title">About Us</h1>
+                                <h1 class= "title has-text-centered"> <a href="./aboutus.html">About Us</h1></a>
                             </div>
                         </div>
                     </article>
@@ -61,12 +70,12 @@
                     <article class="notification is-info">
                         <figure class="media-left">
                             <span class="icon">
-                                <f class="fab fa-lg fa-solid fa-bars"></f>
+                                <f class="fa fa-lg fa-solid fa-bars"></f>
                             </span>
                         </figure>
                         <div class="media-content">
                             <div class="content">
-                                <h1 class= "title">Saved Searches</h1>
+                                <h1 class= "title has-text-centered"> <a href="./savedsearches.html">Saved Searches</h1></a>
                             </div>
                         </div>
                     </article>
@@ -75,12 +84,12 @@
                     <article class="notification is-info">
                         <figure class="media-left">
                             <span class="icon">
-                                <f class="fab fa-lg fa-solid fa-envelope"></f>
+                                <f class="fa fa-lg fa-envelope-open"></f>
                             </span>
                         </figure>
                         <div class="media-content">
                             <div class="content">
-                                <h1 class= "title">Contact Us</h1>
+                                <h1 class= "title has-text-centered"> <a href="./contactus.html">Contact Us</h1></a>
                             </div>
                         </div>
                     </article>
@@ -100,6 +109,17 @@
     <script src="./youTubeAPI.js"></script>
 </body>
 
-<footer>Add something cool here</footer>
+    <footer class="footer">
+        <section id="contact" class="contact" >
+            <h2>Contact Me</h2>
+                <ul>
+                    <a href="https://www.linkedin.com/in/ahmed-ramic-1abc/" id="social" alt="linkedin"><img src="assets\images\linkedin.png"></a>
+                    <a href="https://www.instagram.com/aramic11/" id="social" alt="insta"><img src="assets\images\insta.png"></a>
+                    <a href="mailto:bosnianmula@gmail.com" id="social" alt="mail"><img src="assets\images\gmail.png"></a>
+                    <a href="tel:+1-603-858-1213" id="social" alt="phone"><img src="assets\images\phone.png"></a>
+                </ul>
+        </section>
+            <h2>&copy; 2022 Ahmed Ramic Services, Inc.</h2>
+    </footer>
 
 </html>
