@@ -36,9 +36,9 @@ function getTopSongs(id) {
             // const albumNameEL = document.createElement(`p`)
             // img[`src`] = data.data[0].album.cover_medium
             // for (let i = 0; i > 5; i++) {
-            songNameEL.textContent = `Song Title:` + data.data[0].title
-            artistName.textContent = `Artist Name:` + data.data[0].artist.name
-            albumNameEL.textContent = `Album Name:` + data.data[0].album.title
+            songNameEL.textContent = `Song Title: ` + data.data[0].title
+            artistName.textContent = `Artist Name: ` + data.data[0].artist.name
+            albumNameEL.textContent = `Album Name: ` + data.data[0].album.title
             // document.body.appendChild(songNameEL)
             // document.body.appendChild(artistName)
             // document.body.appendChild(albumNameEL)
@@ -62,6 +62,8 @@ function getTopSongs(id) {
 
 searchButton.click(function () {
     artist = $('.userInput').val().trim().replace()
+    youtubeApi(searchButton)
     getApi()
-    // youtubeApi()
+
+    console.log(youtubeApi)
 })
