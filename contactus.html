@@ -29,27 +29,57 @@
  
 <!--The 3 Sections "About Us", "Saved Searches", "Contact us"-->
     <article class="notification is-info has-text-centered">
-        <h3>Please fill in the form and let us know how we did or give us suggestions!</h3>
+        <h3>Please fill out the form and let us know how we did or give us suggestions!</h3>
     </article>
 
     <section class="hero is-fullheight has-text-centered" class="center">
 
         <div class="center">
             <form class="notification is-primary is-light">
+                <div class="field">
+                    <label class="label is-medium">Contact Form</label>
+                    <div class="control has-icons-left has-icons-right">
+                      <input class="input is-small" type="email" placeholder="Name" required="">
+                      <span class="icon is-small is-left">
+                        <i class="fa fa-address-book fa-xs"></i>
+                      </span>
+                      <span class="icon is-small is-right">
+                        <i class="fas fa-check fa-xs"></i>
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <div class="field">
+                    <div class="control has-icons-left has-icons-right">
+                      <input class="input is-small" type="email" placeholder="Email" required="">
+                      <span class="icon is-left">
+                        <i class="fas fa-envelope fa-sm"></i>
+                      </span>
+                      <span class="icon is-right">
+                        <i class="fas fa-check fa-sm"></i>
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <div class="field">
+                    <div class="control has-icons-left has-icons-right">
+                      <input class="input is-small" type="phone" placeholder="Phone" required="">
+                      <span class="icon is-medium is-left">
+                        <i class="fa fa-phone"></i>
+                      </span>
+                      <span class="icon is-medium is-right">
+                        <i class="fas fa-check"></i>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <div class="control has-icons-left has-icons-right">
+                      <textarea class="input is-large" type="text" placeholder="Message"></textarea>
+                    </div>
+                  </div>
                 <div>
-                    <input type="text" placeholder="Name" required="">
-                </div>
-                <div>
-                    <input type="email" placeholder="Email" required="">
-                </div>
-                <div>
-                    <input type="tel" placeholder="Phone" required="">
-                </div>
-                <div class="is-size-1">
-                    <textarea class="input is-large" type="text" placeholder="Message" required=""></textarea>
-                </div>
-                <div>
-                    <button>submit</button>
+                    <button>Submit</button>
                 </div>
             </form>
     </div>
