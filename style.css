@@ -8,8 +8,8 @@
 /*Background Image*/
 body {
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwaiwmFsVFT2kbj3gAu_HI6yp7RTeIETdzAQ&usqp=CAU);
-   
-} 
+
+}
 
 
 .top-bar {
@@ -27,14 +27,8 @@ body {
     align-items: center;
 }
 
-.search {
+.search {}
 
-}
-
-.navigation div ul li {
+/* .navigation div ul li {
     display: inline-block;
-    margin-left: 25px;
-    
-
-
-
+    margin-left: 25px; */
