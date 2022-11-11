@@ -23,26 +23,41 @@
                 <a class="navbar-item" href="./contactus.html">Contact Us</a>
             </div>
         </div>
-        <!--Add some styling, classes and center it so the company name could appear on the top-->
     </nav>
     
 
     <section class="hero">
-        <!--Add Large container here which will hold the "Search Bar", "Search Results", "Link to Music video, and "Social Media" -->
         <div class="hero-body">
             <div class="container">
             <!--This will be the Search bar-->
             <input type="text" class="userInput"><button type='button' class="searchButton">Search</button>
             </div>
+
+            <div class="field has-addons">
+                <div class="control">
+                  <input class="input" type="text" placeholder="Search Artist">
+                </div>
+                <div class="control">
+                  <a class="button is-primary">
+                    Search
+                  </a>
+                </div>
+              </div>
         </div>
-        <div>
-            <!--This will be the Search Resutls-->
-        </div>
-        <div>
-            <!--Link to music video/ Lyrics-->
-        </div>
-        <div>
-            <!--Social Media Icons-->
+
+
+
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div column>
+                    <div class="section notification is-light">
+                        <div class="container has-text-centered">
+                          <p>Search Results</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -100,19 +115,18 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"> </script>
     <script src="./deezerAPI.js"></script>
     <script src="./script.js"></script>
-</body>
+
 
     <footer class="footer">
-        <section id="contact" class="contact" >
-            <h2>Contact Me</h2>
-                <ul>
-                    <a href="https://www.linkedin.com/in/ahmed-ramic-1abc/" id="social" alt="linkedin"><img src="assets\images\linkedin.png"></a>
-                    <a href="https://www.instagram.com/aramic11/" id="social" alt="insta"><img src="assets\images\insta.png"></a>
-                    <a href="mailto:bosnianmula@gmail.com" id="social" alt="mail"><img src="assets\images\gmail.png"></a>
-                    <a href="tel:+1-603-858-1213" id="social" alt="phone"><img src="assets\images\phone.png"></a>
-                </ul>
-        </section>
-            <h2>&copy; 2022 Ahmed Ramic Services, Inc.</h2>
+        <div class="content has-text-centered notification is-info">
+            <figure class="media-left">
+                <span class="icon">
+                    <f class="fa fa-lg fa-music"></f>
+                </span>
+            </figure>
+            <p>Copyright 2022 TopTunes</p>
+        </div>
     </footer>
+</body>
 
 </html>
