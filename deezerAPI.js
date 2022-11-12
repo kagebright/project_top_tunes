@@ -37,15 +37,20 @@ function getTopSongs(id) {
         .then(function (data) {
             artistName.textContent = `Artist Name: ` + data.data[0].artist.name
             discContainer.appendChild(artistName)
+            const saveButton = document.createElement(`button`)
             for (let i = 0; i < 5; i++) {
                 const songNameEL = document.createElement(`h1`)
                 const albumNameEL = document.createElement(`p`)
+
                 songNameEL.textContent = `Song Title: ` + data.data[i].title
+
                 albumNameEL.textContent = `Album Name: ` + data.data[i].album.title
+
                 discContainer.appendChild(songNameEL)
                 discContainer.appendChild(albumNameEL)
+                discContainer.append(saveButton)
             }
-
+            saveButton.textContent = `save list!`
             // albumPicUrl.textContent = data.data[0].album.cover_medium
             // nextButton.textContent = 'Get 5 more songs!'
             // nextButton.append(songNameEL)
@@ -58,7 +63,7 @@ function getTopSongs(id) {
 
 
 bigSearchButton.click(function () {
-    artist = $('.user-Input').val().trim().replace()
+    artist = $('.user-Input').val().trim().replace(/\s+/g, '-')
     console.log(artist)
     youtubeApi(artist)
     getApi()
@@ -68,10 +73,3 @@ bigSearchButton.click(function () {
     console.log(youtubeApi)
 })
 
-searchButton.click(function () {
-    artist = $('.userInput').val().trim().replace()
-    youtubeApi(artist)
-    getApi()
-
-    console.log(youtubeApi)
-})
