@@ -28,11 +28,11 @@ function youtubeApi(searchArtist) {
 
 // youtubeApi()
 
-document.getElementById("button").addEventListener("click", function() {
-  console.log(document.getElementById("input"))
-  console.log(document.getElementById("input").value)
-    youtubeApi(document.getElementById("input").value);
-  });
+// document.getElementById("button").addEventListener("click", function() {
+//   console.log(document.getElementById("input"))
+//   console.log(document.getElementById("input").value)
+//     youtubeApi(document.getElementById("input").value);
+//   });
   
  // function authenticate() {
  //   return gapi.auth2.getAuthInstance()
