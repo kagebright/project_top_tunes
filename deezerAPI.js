@@ -1,13 +1,17 @@
 
 const searchButton = $('.searchButton')
 let artist;
-const songNameEL = document.getElementById('songTitle')
-const albumPic = document.getElementById('albumCover')
-const artistName = document.getElementById('artistName')
-const albumNameEL = document.getElementById('albumName')
+// const songNameEL = document.getElementById('songTitle')
+// const albumPic = document.getElementById('albumCover')
+// const artistName = document.getElementById('artistName')
+// const albumNameEL = document.getElementById('albumName')
 // const albumPicUrl = img[`src`]
 const nextButton = document.createElement(`button`)
 const searchResults = document.getElementById(`searchResults`)
+const bigSearchButton = $('#bigSearchButton')
+const discContainer = document.querySelector('.discContainer')
+const artistName = document.createElement(`p`)
+
 
 
 
@@ -31,25 +35,18 @@ function getTopSongs(id) {
             return response.json()
         })
         .then(function (data) {
-            // const songNameEL = document.createElement(`h1`)
-            // const artistName = document.createElement(`p`)
-            // const albumNameEL = document.createElement(`p`)
-            // img[`src`] = data.data[0].album.cover_medium
-            // for (let i = 0; i > 5; i++) {
-            songNameEL.textContent = `Song Title:` + data.data[0].title
-            artistName.textContent = `Artist Name:` + data.data[0].artist.name
-            albumNameEL.textContent = `Album Name:` + data.data[0].album.title
-            // document.body.appendChild(songNameEL)
-            // document.body.appendChild(artistName)
-            // document.body.appendChild(albumNameEL)
+            artistName.textContent = `Artist Name: ` + data.data[0].artist.name
+            discContainer.appendChild(artistName)
+            for (let i = 0; i < 5; i++) {
+                const songNameEL = document.createElement(`h1`)
+                const albumNameEL = document.createElement(`p`)
+                songNameEL.textContent = `Song Title: ` + data.data[i].title
+                albumNameEL.textContent = `Album Name: ` + data.data[i].album.title
+                discContainer.appendChild(songNameEL)
+                discContainer.appendChild(albumNameEL)
+            }
 
-            // songNameEL.css(`color`, `red`)
             // albumPicUrl.textContent = data.data[0].album.cover_medium
-            // }
-            // songNameEL.textContent = data.data[1].title + data.data[1].album.title + data.data[1].artist.name
-            // songNameEL.textContent = data.data[2].title + data.data[2].album.title + data.data[2].artist.name
-            // songNameEL.textContent = data.data[3].title + data.data[3].album.title + data.data[3].artist.name
-            // songNameEL.textContent = data.data[4].title + data.data[4].album.title + data.data[4].artist.name
             // nextButton.textContent = 'Get 5 more songs!'
             // nextButton.append(songNameEL)
             // albumPic.innerHTML = img[`src`]
@@ -60,8 +57,21 @@ function getTopSongs(id) {
 
 
 
+bigSearchButton.click(function () {
+    artist = $('.user-Input').val().trim().replace()
+    console.log(artist)
+    youtubeApi(artist)
+    getApi()
+    console.log('hello')
+
+
+    console.log(youtubeApi)
+})
+
 searchButton.click(function () {
     artist = $('.userInput').val().trim().replace()
+    youtubeApi(artist)
     getApi()
-    // youtubeApi()
+
+    console.log(youtubeApi)
 })

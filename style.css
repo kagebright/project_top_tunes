@@ -33,3 +33,10 @@ body {
     display: inline-block;
     margin-left: 25px;
 }
+
+.searchArtistHeader {
+    background-color: white;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+}
