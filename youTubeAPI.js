@@ -17,17 +17,22 @@ function youtubeApi(searchArtist) {
         .then(function (response) {
             return response.json();
           })
+        
           .then(function (data) {
+            console.log(data)
             videosEL.innerHTML = data.items[0].player.embedHtml;
+          
           });
         });
 }
 
 // youtubeApi()
 
-document.getElementById("button").addEventListener("click", function() {
-    youtubeApi(document.getElementById("input").value);
-  });
+// document.getElementById("button").addEventListener("click", function() {
+//   console.log(document.getElementById("input"))
+//   console.log(document.getElementById("input").value)
+//     youtubeApi(document.getElementById("input").value);
+//   });
   
  // function authenticate() {
  //   return gapi.auth2.getAuthInstance()

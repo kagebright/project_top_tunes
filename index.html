@@ -27,124 +27,121 @@
 
     <section class="hero">
         <div class="hero-body">
-            <div class="container">
-                <!--This will be the Search bar-->
-                <input type="text" class="userInput"><button type='button' class="searchButton">Search</button>
-            </div>
+            <!-- <div class="container"> -->
+            <!--This will be the Search bar-->
+            <!-- <input type="text" class="userInput"><button type='button' class="searchButton">Search</button> -->
+            <!-- </div> -->
 
             <div class="field has-addons">
                 <div class="control">
-                  <input class="input" type="text" placeholder="Search Artist">
+                    <h1 class="searchArtistHeader">Search for an Artist!!</h1>
+                    <input class="user-Input" type="text" placeholder="Search Artist">
+                    <button id="bigSearchButton" type='button' class="button is-primary">
+                        Search
+                    </button>
                 </div>
-                <div class="control">
-                  <a class="button is-primary">
-                    Search
-                  </a>
-                </div>
-              </div>
+            </div>
         </div>
 
 
 
 
-    <section class="section">
-        <div class="container" id="searchResults">
-        
-            <div class="columns">
-                <div column>
-                    <div class="section notification is-light">
-                        <div class="container has-text-centered">
-                          <p>Search Results</p>
-                          <h1 id="songTitle"></h1>
-                          <p id="artistName"></p>
-                          <p id="albumName"></p>
-                          <a id="albumPic">
+        <section class="section">
+            <div class="container" id="searchResults">
+
+                <div class="columns">
+                    <div column>
+                        <div class="section notification is-light">
+                            <div class="container discContainer has-text-centered">
+                                <p>Search Results</p>
+                            </div>
+                            <section id="videos"></section>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
 
-    <!--The 3 Sections "About Us", "Saved Searches", "Contact us"-->
-    <section class="section has-background-light">
+        <!--The 3 Sections "About Us", "Saved Searches", "Contact us"-->
+        <section class="section has-background-light">
 
-        <div class="container">
-            <div class="columns has-text-centered">
-                <div class="column">
+            <div class="container">
+                <div class="columns has-text-centered">
+                    <div class="column">
 
-                    <article class="notification is-info">
-                        <figure class="media-left">
-                            <span class="icon">
-                                <f class="fa fa-lg fa-address-card"></f>
-                            </span>
-                        </figure>
-                        <div class="media-content">
-                            <div class="content">
-                                <h1 class="title has-text-centered"> <a href="./aboutus.html">About Us</h1></a>
+                        <article class="notification is-info">
+                            <figure class="media-left">
+                                <span class="icon">
+                                    <f class="fa fa-lg fa-address-card"></f>
+                                </span>
+                            </figure>
+                            <div class="media-content">
+                                <div class="content">
+                                    <h1 class="title has-text-centered"> <a href="./aboutus.html">About Us</h1></a>
+                                </div>
                             </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="column">
-                    <article class="notification is-info">
-                        <figure class="media-left">
-                            <span class="icon">
-                                <f class="fa fa-lg fa-solid fa-bars"></f>
-                            </span>
-                        </figure>
-                        <div class="media-content">
-                            <div class="content">
-                                <h1 class="title has-text-centered"> <a href="./savedsearches.html">Saved Searches</h1>
-                                </a>
+                        </article>
+                    </div>
+                    <div class="column">
+                        <article class="notification is-info">
+                            <figure class="media-left">
+                                <span class="icon">
+                                    <f class="fa fa-lg fa-solid fa-bars"></f>
+                                </span>
+                            </figure>
+                            <div class="media-content">
+                                <div class="content">
+                                    <h1 class="title has-text-centered"> <a href="./savedsearches.html">Saved Searches
+                                    </h1>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="column">
-                    <article class="notification is-info">
-                        <figure class="media-left">
-                            <span class="icon">
-                                <f class="fa fa-lg fa-envelope-open"></f>
-                            </span>
-                        </figure>
-                        <div class="media-content">
-                            <div class="content">
-                                <h1 class="title has-text-centered"> <a href="./contactus.html">Contact Us</h1></a>
+                        </article>
+                    </div>
+                    <div class="column">
+                        <article class="notification is-info">
+                            <figure class="media-left">
+                                <span class="icon">
+                                    <f class="fa fa-lg fa-envelope-open"></f>
+                                </span>
+                            </figure>
+                            <div class="media-content">
+                                <div class="content">
+                                    <h1 class="title has-text-centered"> <a href="./contactus.html">Contact Us</h1></a>
+                                </div>
                             </div>
-                        </div>
-                    </article>
-                </div>
+                        </article>
+                    </div>
 
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <input type="text" placholder="Enter artist name" id="input" />
-    <button id="button">Search</button>
-    <section id="videos"></section>
+        <!-- <input type="text" placholder="Enter artist name" id="input" />
+        <button id="button">Search</button> -->
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"> </script>
-    <script src="https://apis.google.com/js/api.js"></script>
-    <script src="./deezerAPI.js"></script>
 
-    
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"> </script>
+        <script src="https://apis.google.com/js/api.js"></script>
+        <script src="./deezerAPI.js"></script>
 
-    <script src="./youTubeAPI.js"></script>
+
+
+        <script src="./youTubeAPI.js"></script>
 </body>
 
 
-    <footer class="footer">
-        <div class="content has-text-centered notification is-info">
-            <figure class="media-left">
-                <span class="icon">
-                    <f class="fa fa-lg fa-music"></f>
-                </span>
-            </figure>
-            <p>Copyright 2022 TopTunes</p>
-        </div>
-    </footer>
+<footer class="footer">
+    <div class="content has-text-centered notification is-info">
+        <figure class="media-left">
+            <span class="icon">
+                <f class="fa fa-lg fa-music"></f>
+            </span>
+        </figure>
+        <p>Copyright 2022 TopTunes</p>
+    </div>
+</footer>
 </body>
 
 </html>
