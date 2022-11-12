@@ -31,28 +31,34 @@
             <!--This will be the Search bar-->
             <!-- <input type="text" class="userInput"><button type='button' class="searchButton">Search</button> -->
             <!-- </div> -->
-
-            <div class="field has-addons">
-                <div class="control">
-                    <h1 class="searchArtistHeader">Search for an Artist!!</h1>
-                    <input class="user-Input" type="text" placeholder="Search Artist">
-                    <button id="bigSearchButton" type='button' class="button is-primary">
-                        Search
-                    </button>
+                <div class="container notification is-danger">
+                    <div class="columns">
+                        <div class="column">
+                            <div class="field has-addons">
+                                <div class="control has-text-centered">
+                                    <h1 class="searchArtistHeader has-text-centered notification is-danger">Search for an Artist!</h1>
+                                    <input class="user-Input input is-large" type="text" placeholder="Search Artist">
+                                    <button id="bigSearchButton" type='button' class="button is-info">
+                                        Search
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <figure>
+                                <img src="./assets/singers.png" alt="Tyler" style="max-height: 350px">
+                            </figure>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-
-
 
 
         <section class="section">
             <div class="container" id="searchResults">
-
                 <div class="columns">
                     <div column>
                         <div class="section notification is-light">
-                            <div class="container discContainer has-text-centered">
+                            <div class="container discContainer has-text-centered notification is-danger">
                                 <p>Search Results</p>
                             </div>
                             <section id="videos"></section>
@@ -65,11 +71,9 @@
 
         <!--The 3 Sections "About Us", "Saved Searches", "Contact us"-->
         <section class="section has-background-light">
-
             <div class="container">
                 <div class="columns has-text-centered">
                     <div class="column">
-
                         <article class="notification is-info">
                             <figure class="media-left">
                                 <span class="icon">
@@ -113,7 +117,6 @@
                             </div>
                         </article>
                     </div>
-
                 </div>
             </div>
         </section>
