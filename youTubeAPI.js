@@ -1,8 +1,11 @@
-const apiKey= "AIzaSyCvwFXwykEYMZpivD7c0pXm2KjCi1srHwY"
+const apiKey= "AIzaSyDyBN4PZvhznxRfK4dKAvNGFHMFS8yuaq4"
 const videosEL= document.getElementById("videos");
 
+
+// "AIzaSyCvwFXwykEYMZpivD7c0pXm2KjCi1srHwY"
+
 function youtubeApi(searchArtist) {
-    const apiKey = "AIzaSyCvwFXwykEYMZpivD7c0pXm2KjCi1srHwY"
+    const apiKey = "AIzaSyDyBN4PZvhznxRfK4dKAvNGFHMFS8yuaq4"
     const queryURL = "https://www.googleapis.com/youtube/v3/search?q=" + searchArtist + "&key="+ apiKey;
     
     fetch(queryURL)
