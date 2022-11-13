@@ -41,10 +41,10 @@ function getTopSongs(id) {
             for (let i = 0; i < 5; i++) {
                 const songLink = document.createElement(`a`)
                 const songNameEL = document.createElement(`h1`)
-                const albumNameEL = document.createElement(`p`)
-                songNameEL.textContent = `Song Title: ` + data.data[i].title
-                songLink.setAttribute = `href` + data.data[i].link
-                albumNameEL.textContent = `Album Name: ` + data.data[i].album.title
+                // const albumNameEL = document.createElement(`p`)
+                songNameEL.textContent = `Song Title: ` + data.data[i].title + ` Album Name: ` + data.data[i].album.title
+                // songLink.setAttribute = `href` + data.data[i].link
+                // albumNameEL.textContent = `Album Name: ` + data.data[i].album.title
                 const savedObj = {
                     songTitle: data.data[i].title,
                     albumName: data.data[i].album.title,
@@ -52,7 +52,7 @@ function getTopSongs(id) {
                 }
                 saveArtist.songs.push(savedObj)
                 discContainer.appendChild(songNameEL)
-                discContainer.appendChild(albumNameEL)
+                // discContainer.appendChild(albumNameEL)
                 // discContainer.append(saveButton)
                 discContainer.append(songLink)
             }
@@ -97,11 +97,11 @@ function fillSavedSearches() {
         savedSearchEl.append(savedArtistName)
         for (let j = 0; j < hasSavedArray[i].songs.length; j++) {
             const savedSongNameEl = document.createElement(`h1`)
-            const savedAlbumNameEL = document.createElement(`p`)
-            savedSongNameEl.textContent = `Song Title: ${hasSavedArray[i].songs[j].songTitle}`
-            savedAlbumNameEL.textContent = `Album Name: ${hasSavedArray[i].songs[j].albumName}`
+            // const savedAlbumNameEL = document.createElement(`p`)
+            savedSongNameEl.textContent = `Song Title: ${hasSavedArray[i].songs[j].songTitle} Album Name: ${hasSavedArray[i].songs[j].albumName}`
+            // savedAlbumNameEL.textContent = `Album Name: ${hasSavedArray[i].songs[j].albumName}`
             savedSearchEl.append(savedSongNameEl)
-            savedSearchEl.append(savedAlbumNameEL)
+            // savedSearchEl.append(savedAlbumNameEL)
         }
 
     }
@@ -116,7 +116,7 @@ bigSearchButton.click(function () {
     // console.log('hello')
 
 
-    // console.log(youtubeApi)
+    console.log(youtubeApi)
 })
 
 fillSavedSearches()

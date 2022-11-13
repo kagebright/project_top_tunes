@@ -10,6 +10,7 @@ function youtubeApi(searchArtist) {
             return response.json()
         })
         .then(function(data) {
+          console.log(data)
         const videoId = data.items[0].id.videoId;
         const queryURL = "https://www.googleapis.com/youtube/v3/videos?part=player&id=" + videoId + "&key=" + apiKey;
         
