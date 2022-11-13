@@ -53,7 +53,7 @@ function getTopSongs(id) {
                 saveArtist.songs.push(savedObj)
                 discContainer.appendChild(songNameEL)
                 discContainer.appendChild(albumNameEL)
-                discContainer.append(saveButton)
+                // discContainer.append(saveButton)
                 discContainer.append(songLink)
             }
             savedArray.push(saveArtist)
