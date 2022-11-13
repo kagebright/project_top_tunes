@@ -18,12 +18,12 @@ function youtubeApi(searchArtist) {
             return response.json();
           })
           .then(function (data) {
-            videosEl.innerHTML = data.items[0].player.embedHtml;
+            videosEL.innerHTML = data.items[0].player.embedHtml;
           });
         });
 }
 
-youtubeApi()
+// youtubeApi()
 
 document.getElementById("button").addEventListener("click", function() {
     youtubeApi(document.getElementById("input").value);
