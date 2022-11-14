@@ -27,16 +27,18 @@
     </nav>
 
     <section class="notification is-info has-text-centered">
-        <div>
-            <img class="image is-2by1" src="./assets/about-me.png" placeholder="Image">
-            <div id="about-text">
-                <h1 class="title is-1">About Us</h1>
-                <h3 class="title is-3">Future Software Developers</h3>
-                <p>Welcome to our website! I'm glad you have navigated over here to learn a little bit about our contributions and our fantastic page. We are music fans and have decided to create a website where the user could find the top songs to any artist they search and they could save their favorite songs to a playlist which could be viewed later. We have decided to split up the tasks to get the website up and running as soon as possible so everyone could enjoy it. Bright was in charge of the YouTube API and he worked on making it functional with our website. So once a user clicks on one of the top songs, it would redirect them to the music video on YouTube. Tyler was in charge of the Deezer API. Deezer is sort of like Spotify as it’s a library that contains millions of songs. So when the user searches an artist, Deezer is able to pull that specific artist's top songs for the user to see. Then we synchronized the YouTube and Deezer APIs so the user could see the top songs of an artist as well as watch the music videos on YouTube. Then lastly, (Me) Ahmed worked on making the website come together with the Bulma framework. I wanted the user to have a wonderful experience by making the website easy to navigate as well as making each page stylish with loads of important functionality and information. In all, we had a great time working together and have learned so much throughout the entire process. I hope you have enjoyed our website and if you would like to give us any feedback or recommendations then please feel free to head over to the contacts page and send us a message. </p>
-                <a href="./contactus.html">
-                <button type="button"> Send us a message!</button>
-                </a>
-            </div>
+        <div id="about-text">
+            <h1 class="title is-1">About Us</h1>
+                <figure>
+                    <img src="./assets/tyler.png" alt="Tyler" style="max-height: 350px">
+                    <img src="./assets/ahmed.png" alt="Ahmed" style="max-height: 350px">
+                    <img src="./assets/bright.png" alt="Bright" style="max-height: 350px">
+                </figure>
+            <h3 class="title is-3">Future Software Developers</h3>
+            <p>Welcome to our website! I'm glad you have navigated over here to learn a little bit about our contributions and our fantastic page. We are music fans and have decided to create a website where the user could find the top songs to any artist they search and they could save their favorite songs to a playlist which could be viewed later. We have decided to split up the tasks to get the website up and running as soon as possible so everyone could enjoy it. Bright was in charge of the YouTube API and he worked on making it functional with our website. So once a user clicks on one of the top songs, it would redirect them to the music video on YouTube. Tyler was in charge of the Deezer API. Deezer is sort of like Spotify as it’s a library that contains millions of songs. So when the user searches an artist, Deezer is able to pull that specific artist's top songs for the user to see. Then we synchronized the YouTube and Deezer APIs so the user could see the top songs of an artist as well as watch the music videos on YouTube. Then lastly, (Me) Ahmed worked on making the website come together with the Bulma framework. I wanted the user to have a wonderful experience by making the website easy to navigate as well as making each page stylish with loads of important functionality and information. In all, we had a great time working together and have learned so much throughout the entire process. I hope you have enjoyed our website and if you would like to give us any feedback or recommendations then please feel free to head over to the contacts page and send us a message. </p>
+            <a href="./contactus.html">
+            <button type="button"> Send us a message!</button>
+            </a>
         </div>
     </section>
 
@@ -54,6 +56,15 @@
     <script src="./script.js"></script>
 </body>
 
-<footer>Add something cool here</footer>
+<footer class="footer">
+    <div class="content has-text-centered notification is-danger">
+        <figure class="media-left">
+            <span class="icon">
+                <f class="fa fa-lg fa-music"></f>
+            </span>
+        </figure>
+        <p>Copyright 2022 TopTunes</p>
+    </div>
+</footer>
 
 </html>

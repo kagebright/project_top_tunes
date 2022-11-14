@@ -1,13 +1,12 @@
 
 const searchButton = $('.searchButton')
 let artist;
-const songNameEL = document.getElementById('songTitle')
-const albumPic = document.getElementById('albumCover')
-const artistName = document.getElementById('artistName')
-const albumNameEL = document.getElementById('albumName')
-// const albumPicUrl = img[`src`]
 const nextButton = document.createElement(`button`)
 const searchResults = document.getElementById(`searchResults`)
+const bigSearchButton = $('#bigSearchButton')
+const discContainer = document.querySelector('.discContainer')
+const artistName = document.createElement(`p`)
+const savedSearchEl = document.getElementById(`saveArtistSearch`)
 
 
 
@@ -31,37 +30,93 @@ function getTopSongs(id) {
             return response.json()
         })
         .then(function (data) {
-            // const songNameEL = document.createElement(`h1`)
-            // const artistName = document.createElement(`p`)
-            // const albumNameEL = document.createElement(`p`)
-            // img[`src`] = data.data[0].album.cover_medium
-            // for (let i = 0; i > 5; i++) {
-            songNameEL.textContent = `Song Title:` + data.data[0].title
-            artistName.textContent = `Artist Name:` + data.data[0].artist.name
-            albumNameEL.textContent = `Album Name:` + data.data[0].album.title
-            // document.body.appendChild(songNameEL)
-            // document.body.appendChild(artistName)
-            // document.body.appendChild(albumNameEL)
+            artistName.textContent = `Artist Name: ` + data.data[0].artist.name
+            discContainer.appendChild(artistName)
 
-            // songNameEL.css(`color`, `red`)
-            // albumPicUrl.textContent = data.data[0].album.cover_medium
-            // }
-            // songNameEL.textContent = data.data[1].title + data.data[1].album.title + data.data[1].artist.name
-            // songNameEL.textContent = data.data[2].title + data.data[2].album.title + data.data[2].artist.name
-            // songNameEL.textContent = data.data[3].title + data.data[3].album.title + data.data[3].artist.name
-            // songNameEL.textContent = data.data[4].title + data.data[4].album.title + data.data[4].artist.name
-            // nextButton.textContent = 'Get 5 more songs!'
-            // nextButton.append(songNameEL)
-            // albumPic.innerHTML = img[`src`]
-            console.log(data.data[0].album.cover_medium)
-            console.log(data.data[0])
+            const savedArray = [];
+            const saveArtist = {
+                artistName: data.data[0].artist.name,
+                songs: [],
+            }
+            for (let i = 0; i < 5; i++) {
+                const songLink = document.createElement(`a`)
+                const songNameEL = document.createElement(`h1`)
+                // const albumNameEL = document.createElement(`p`)
+                songNameEL.textContent = `Song Title: ` + data.data[i].title + ` Album Name: ` + data.data[i].album.title
+                // songLink.setAttribute = `href` + data.data[i].link
+                // albumNameEL.textContent = `Album Name: ` + data.data[i].album.title
+                const savedObj = {
+                    songTitle: data.data[i].title,
+                    albumName: data.data[i].album.title,
+
+                }
+                saveArtist.songs.push(savedObj)
+                discContainer.appendChild(songNameEL)
+                // discContainer.appendChild(albumNameEL)
+                // discContainer.append(saveButton)
+                discContainer.append(songLink)
+            }
+            savedArray.push(saveArtist)
+            checkForArtist(savedArray)
         })
 }
 
 
 
-searchButton.click(function () {
-    artist = $('.userInput').val().trim().replace()
+function checkForArtist(savedArray) {
+    const hasSavedArray = JSON.parse(localStorage.getItem(`savedSearches`)) || [];
+
+    if (!hasSavedArray.length) {
+        console.log(hasSavedArray.length, `this is the IF`)
+
+        localStorage.setItem(`savedSearches`, JSON.stringify(savedArray))
+    } else {
+        console.log(hasSavedArray, `this is in the else`)
+        const found = hasSavedArray.find(obj => {
+            if (obj.artistName == savedArray[0].artistName) {
+                console.log('found')
+                return true
+
+            } else {
+                return false
+            }
+        })
+        console.log(found, `after the else`)
+        if (!found) {
+            hasSavedArray.push(savedArray[0])
+            localStorage.setItem(`savedSearches`, JSON.stringify(hasSavedArray))
+        }
+    }
+}
+
+function fillSavedSearches() {
+    const hasSavedArray = JSON.parse(localStorage.getItem(`savedSearches`)) || [];
+    for (let i = 0; i < hasSavedArray.length; i++) {
+        const savedArtistName = document.createElement(`p`)
+        savedArtistName.textContent = `Artist Name: ${hasSavedArray[i].artistName}`
+        savedSearchEl.append(savedArtistName)
+        for (let j = 0; j < hasSavedArray[i].songs.length; j++) {
+            const savedSongNameEl = document.createElement(`h1`)
+            // const savedAlbumNameEL = document.createElement(`p`)
+            savedSongNameEl.textContent = `Song Title: ${hasSavedArray[i].songs[j].songTitle} Album Name: ${hasSavedArray[i].songs[j].albumName}`
+            // savedAlbumNameEL.textContent = `Album Name: ${hasSavedArray[i].songs[j].albumName}`
+            savedSearchEl.append(savedSongNameEl)
+            // savedSearchEl.append(savedAlbumNameEL)
+        }
+
+    }
+}
+
+bigSearchButton.click(function () {
+    artist = $('.user-Input').val().trim().replace(/\s+/g, '-')
+    discContainer.textContent = ``
+    // console.log(artist)
+    youtubeApi(artist)
     getApi()
-    // youtubeApi()
+    // console.log('hello')
+
+
+    console.log(youtubeApi)
 })
+
+fillSavedSearches()
