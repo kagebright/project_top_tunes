@@ -7,7 +7,7 @@ const bigSearchButton = $('#bigSearchButton')
 const discContainer = document.querySelector('.discContainer')
 const artistName = document.createElement(`p`)
 const savedSearchEl = document.getElementById(`saveArtistSearch`)
-
+const clearSearches = $(`.clearSearches`)
 
 
 function getApi() {
@@ -118,5 +118,12 @@ bigSearchButton.click(function () {
 
     console.log(youtubeApi)
 })
+
+$("#clearBtn").on("click", function () {
+
+    localStorage.clear();
+    savedSearchEl.textContent = ``
+
+});
 
 fillSavedSearches()
