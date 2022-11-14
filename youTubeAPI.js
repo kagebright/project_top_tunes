@@ -1,3 +1,5 @@
+const apiKey= "AIzaSyCvwFXwykEYMZpivD7c0pXm2KjCi1srHwY"
+const videosEl= document.getElementById("videos");
 const apiKey= "AIzaSyDyBN4PZvhznxRfK4dKAvNGFHMFS8yuaq4"
 const videosEL= document.getElementById("videos");
 
@@ -32,11 +34,9 @@ function youtubeApi(searchArtist) {
 
 // youtubeApi()
 
-// document.getElementById("button").addEventListener("click", function() {
-//   console.log(document.getElementById("input"))
-//   console.log(document.getElementById("input").value)
-//     youtubeApi(document.getElementById("input").value);
-//   });
+document.getElementById("button").addEventListener("click", function() {
+    youtubeApi(document.getElementById("input").value);
+  });
   
  // function authenticate() {
  //   return gapi.auth2.getAuthInstance()
