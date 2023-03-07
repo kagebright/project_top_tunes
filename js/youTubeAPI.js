@@ -1,5 +1,4 @@
-// const apiKey= "AIzaSyCvwFXwykEYMZpivD7c0pXm2KjCi1srHwY"
-// const videosEl= document.getElementById("videos");
+
 const apiKey= "AIzaSyDyBN4PZvhznxRfK4dKAvNGFHMFS8yuaq4"
 const videosEL= document.getElementById("videos");
 
